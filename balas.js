@@ -27,7 +27,7 @@ const balas = {
   },
 
   dibujar() {
-    lapiz.fillStyle = 'rgba(0, 255, 13, 1)';
+    lapiz.fillStyle = 'rgba(255, 217, 0, 1)';
     for (const b of this.lista) {
       lapiz.beginPath();
       lapiz.arc(b.x, b.y, 5, 0, Math.PI * 2); 

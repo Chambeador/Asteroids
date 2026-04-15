@@ -11,7 +11,6 @@ const navesita = {
 };
 
 
-
 const teclas = {};
 document.addEventListener('keydown', e => { teclas[e.key] = 1; });
 document.addEventListener('keyup',   e => { teclas[e.key] = 0; });
@@ -21,7 +20,8 @@ function dibujar() {
   lapiz.fillRect(0, 0, canvas.width, canvas.height);
   lapiz.save();
 
-
+  asteroides.dibujar();
+  
   lapiz.translate(navesita.x, navesita.y);
   lapiz.rotate(navesita.angulo);  
 
@@ -34,13 +34,17 @@ function dibujar() {
   balas.dibujar();
 }
 
+asteroides.crear(200, 200);
+asteroides.crear(600, 300);
+asteroides.crear(1000, 100);
 
 
 function gameLoop() {
   if (teclas['ArrowLeft'])  navesita.angulo -= navesita.velocidadGiro;
   if (teclas['ArrowRight']) navesita.angulo += navesita.velocidadGiro;
   if (teclas[' '])          balas.disparar();  
-  balas.actualizar();                          
+  balas.actualizar();  
+  asteroides.actualizar();
   dibujar();
   requestAnimationFrame(gameLoop);
 }
