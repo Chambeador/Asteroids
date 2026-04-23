@@ -19,3 +19,33 @@ canvas {
   width: 1500px;
   height: 700px;
 }
+
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.inicio h1 {
+  color: white;
+  font-size: 6rem;
+  font-family: monospace;
+  letter-spacing: 0.2em;
+}
+
+.inicio button {
+  background: #494a9c;
+  color: white;
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.inicio button:hover {
+  background: #6a6bbf;
+}
