@@ -30,7 +30,7 @@ h1{
 
 textarea{
     width: 100%;
-    height: 150px;
+    height: 160px;
 }
 
 .boton{
@@ -40,6 +40,6 @@ textarea{
 
 .entrada, .proceso, .resultado{
     width: 100%;
-    height: 150px;
+    height: 160px;
     border: 1px solid black;
 }
