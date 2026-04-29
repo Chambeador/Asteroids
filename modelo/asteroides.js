@@ -34,16 +34,14 @@ const asteroides = {
   },
 
 
-   distancia(a, b) {
+   distancia(a, b){
     const dx = a.x - b.x;
     const dy = a.y - b.y;
     return Math.sqrt(dx * dx + dy * dy);
   },
 
-  colisionBalas() {
-
+  colisionBalas(){
     let radio_bala = 5;
-
       for (const b of balas.lista) {
           for (const a of this.lista) {
               if (this.distancia(b, a) < a.tamaño + radio_bala) {
@@ -54,8 +52,7 @@ const asteroides = {
       }
   },
 
-  colisionEntreAsteroides() {
-
+  colisionEntreAsteroides(){
       for(let i = 0; i < this.lista.length; i++){
           for(let j = i + 1; j < this.lista.length; j++){
               let a = this.lista[i];
@@ -69,14 +66,14 @@ const asteroides = {
       }
   },
 
-  verificarColisiones() {
+  verificarColisiones(){
       this.colisionBalas();
       this.colisionEntreAsteroides();
       this.lista = this.lista.filter(a => !a.muerto);
   },
 
 
-  actualizar(ancho, alto) {
+  actualizar(ancho, alto){
     for (const a of this.lista) {
       a.x += a.velocidad_x;
       a.y += a.velocidad_y;

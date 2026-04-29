@@ -5,8 +5,8 @@ const balas = {
 
   disparar() {
     if (this.tiempo_espera > 0) return;
-    const px = navesita.x + Math.sin(navesita.angulo) * 20;
-    const py = navesita.y - Math.cos(navesita.angulo) * 20;
+    const px = navesita.x + Math.sin(navesita.angulo)*20;
+    const py = navesita.y - Math.cos(navesita.angulo)*20;
     this.lista.push({
       x: px,
       y: py,

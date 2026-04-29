@@ -13,7 +13,7 @@ function gameLoop() {
   if (navesita.colisiona()) {
     setTimeout(() => window.location.href = 'inicio.html', 500);
     return;
-}
+  }
 
 
   balas.actualizar();

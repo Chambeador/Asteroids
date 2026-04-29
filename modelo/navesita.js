@@ -4,10 +4,10 @@ const navesita = {
   angulo: Math.PI / 2,
   velocidadGiro: 0.07,
 
-  distancia(a) {
-    const dx = this.x - a.x;
-    const dy = this.y - a.y;
-    return Math.sqrt(dx * dx + dy * dy);
+  distancia(a){
+    const dx = this.x-a.x;
+    const dy = this.y-a.y;
+    return Math.sqrt(dx*dx+dy*dy);
   },
 
 
